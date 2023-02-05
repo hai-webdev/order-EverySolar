@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Document</title>
+<link href="/src/css/common.css" rel="stylesheet"><link href="/src/css/product_view.css" rel="stylesheet"></head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <header class="header"> <a href="/" class="logo wow fadeInLeft"> <img src="/public/img/logo.png" alt=""> </a> <nav class="nav-list"> <a href="product_view.html" class="nav-item">6.66kW</a> <a href="product_view.html" class="nav-item">10.36kW-10.73kW</a> <a href="product_view.html" class="nav-item">13.32kW</a> <a href="product_view.html" class="nav-item">17.76kW-19.98kW</a> <a href="commercial.html" class="nav-item">Commercial</a> <a href="tesla.html" class="nav-item">TESLA Powerwall</a> <div class="close"> <svg t="1637200468694" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2472" width="96" height="96"> <path d="M512 128C300.8 128 128 300.8 128 512s172.8 384 384 384 384-172.8 384-384S723.2 128 512 128zM512 832c-179.2 0-320-140.8-320-320s140.8-320 320-320 320 140.8 320 320S691.2 832 512 832z" p-id="2473"></path> <path d="M672 352c-12.8-12.8-32-12.8-44.8 0L512 467.2 396.8 352C384 339.2 364.8 339.2 352 352S339.2 384 352 396.8L467.2 512 352 627.2c-12.8 12.8-12.8 32 0 44.8s32 12.8 44.8 0L512 556.8l115.2 115.2c12.8 12.8 32 12.8 44.8 0s12.8-32 0-44.8L556.8 512l115.2-115.2C684.8 384 684.8 364.8 672 352z" p-id="2474"></path> </svg> </div> </nav> <div class="menu"> <span class="nav-btn">Nav</span> <span class="menu-btn">Menu <i></i> </span> <a href="tel:1300716916" class="tel"> <i class="iconfont icon-tel"></i> 1300 716 916 </a> <a href="contact.html" class="contact">Contact</a> </div> </header> <aside class="menu-container"> <div class="menu"> <span></span> <span></span> <span></span> </div> <ul class="menu-list"> <li class="menu-item"> <a href="about.html">About Us</a> </li> <li class="menu-item"> <a href="faq.html">FAQ</a> </li> <li class="menu-item"> <br> </li> <li class="menu-item"> <a href="panels.html">PV Module</a> </li> <li class="menu-item"> <a href="inverter.html">Inverters</a> </li> <li class="menu-item"> <a href="monitoring.html">System Monitoring</a> </li> <li class="menu-item m-show"> <br> </li> <li class="menu-item m-show"> <a href="tesla.html">TESLA Powerwall</a> </li> <li class="menu-item m-show"> <a href="commercial.html">Commercial</a> </li> <li class="menu-item"> <br> </li> <li class="menu-item"> <a href="process.html">Our Process</a> </li> <li class="menu-item"> <a href="quote.html">Get a Quote</a> </li> <li class="menu-item"> <a href="payment.html">Payment Plan</a> </li> <li class="menu-item"> <br> </li> <li class="menu-item"> <a href="contact.html">Contact Us</a> </li> <li class="menu-item"> <br> </li> <li class="menu-item"> <a href="npo.html">Special Support for NPO</a> </li> </ul> </aside> 
+    <!-- <header>
+    <a href="/" class="logo">
+      <img src="/public/img/logo.png" alt="">
+    </a>
+  </header> -->
+  <div class="pro-nav-container">
+    <div class="pro-nav-show">
+      <span>Choose different Size</span>
+      <svg t="1633748362760" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2081" width="32" height="32">
+        <path d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z" p-id="2082"></path>
+      </svg>
+    </div>
+    <ul class="pro-nav-list">
+      <li class="pro-nav-item">
+        <a href="product_view.html">6.66kW</a>
+      </li>
+      <li class="pro-nav-item">
+        <a href="product_view.html">10.36kW-10.73kW</a>
+      </li>
+      <li class="pro-nav-item">
+        <a href="product_view.html">13.32kW</a>
+      </li>
+      <li class="pro-nav-item">
+        <a href="product_view.html">17.76kW-19.98kW</a>
+      </li>
+    </ul>
+  </div>
+    <div class="body" id="app">
+      <div class="left-content">
+        <div class="pro-swiper">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide" v-for="(item, index) in pics" :key="item" :class="{
+            show: index == picsIndex
+            }" :style="{
+              backgroundImage: `url(${item.indexOf('http') !== -1 ? item : window.webSite + item})`
+            }">
+          </li>
+        
+          </ul>
+          <div class="swiper-button-prev" @click="changIndex('-')"></div>
+          <div class="swiper-button-next" @click="changIndex('+')"></div>
+        </div>
+      </div>
+      <aside class="info">
+        <div class="main-cont">
+          <div class="title">6.66kW</div>
+          <input type="hidden" ref="startFormPrice" value="4480.00">
+          <!-- <div class="note">Start from $4,480</div> -->
+          <div class="desc">Suitable for Single-phase & three-phase</div>
+          <ul class="version-option-list">
+            <li class="version-option-item">
+              <p>PV Module</p>
+              <div class="select-wrap">
+                <button @click="selectToggle(select01)" id="select01">
+                  <span>{{ ranel.isCont ? `${ranel.title}` : 'please choose' }}</span>
+                  <span><svg t="1633748362760" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2081" width="96" height="96">
+                      <path d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z" p-id="2082"></path>
+                    </svg></span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item" v-for="item in select01List" :key="item.name" @click="selectClick([item.name, item.price], select01)">
+                    <span>{{item.name}}</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="version-option-item">
+              <p>Inverter</p>
+              <div class="select-wrap">
+                <button @click="selectToggle(select02)" id="select02">
+                  <span>{{ inverter.isCont ? `${inverter.title}` : 'please choose' }}</span>
+                  <span><svg t="1633748362760" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2081" width="96" height="96">
+                      <path d="M511.993856 628.397287c-5.956358 0-11.910668-2.271137-16.454989-6.815458L262.823137 388.8661c-9.087618-9.087618-9.087618-23.822359 0-32.911002 9.087618-9.088642 23.823383-9.088642 32.911002 0l216.260741 216.259717 216.269957-216.260741c9.088642-9.088642 23.823383-9.087618 32.912026 0 9.087618 9.088642 9.086594 23.823383-0.001024 32.911002l-232.72597 232.714706C523.905548 626.125127 517.94919 628.397287 511.993856 628.397287z" p-id="2082"></path>
+                    </svg></span>
+                </button>
+                <ul class="select-list">
+                  <li class="select-item" v-for="item in select02List" @click="selectClick([item.name, item.price], select02)">
+                    <span>{{item.name}}</span>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+          <div class="size-wrap">
+            <div class="size-title" v-if="size">
+              System Size：<span>{{size}}</span>
+            </div>
+          </div>
+          <div class="select-box">
+            <div class="title">Optional Accessories</div>
+            <label :for="item.id" v-for="item in accList" :key="item.id">
+              <span>
+                <input type="checkbox" :value="item.price" v-model="accVal" :id="item.id" @click="getAccTitle(item.title)">
+                {{item.title}}
+              </span>
+              <span class="price">{{'$' + item.price}}</span>
+            </label>
+          </div>
+        </div>
+        <div class="price-wrap">
+          <div class="price-title">
+            Price Is Out Of Pocket After STC Incentives Applied
+          <!-- <span>(Small Technology Certificate)</span> -->
+          </div>
+          <div class="price-num">
+            $<span id="price-num">{{totalPrice ? totalPrice : startFormPrice}}</span>
+          </div>
+        </div>
+        <div class="btns">
+          <a href="javascript:;" @click="messageShow('When are you ready for installation?')" class="btn message-show">I am ready to order</a>
+          <a href="javascript:;" @click="messageShow('Do you need on-site sale assistance?')" class="btn message-show">I need more help</a>
+        </div>
+      </aside>
+      <section class="message-container center">
+        <div class="contact-info">
+          <form action="" id="message" class="form-box">
+            <label for="" class="w50 ml0">
+              <span>First Name:</span>
+              <input type="text">
+            </label>
+            <label for="" class="w50 mr0">
+              <span>Family Name:</span>
+              <input type="text">
+            </label>
+            <label for="" class="ml0 mr0">
+              <span>Address:</span>
+              <input type="text">
+            </label>
+            <label for="" class="w50 ml0">
+              <span>Email:</span>
+              <input type="text">
+            </label>
+            <label for="" class="w50 mr0">
+              <span>Phone:</span>
+              <input type="text">
+            </label>
+            <label for="" class="w33 ml0 mr0">
+              <span>Roof Type:</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">Choose Roof Type</option>
+                <option value="Klip-Lok®">Klip-Lok®</option>
+                <option value="Tin / Colourbond">Tin / Colourbond</option>
+                <option value="LONGLINE®"> LONGLINE®</option>
+                <option value="Terracotta"> Terracotta</option>
+                <option value="Tile">Tile</option>
+                <option value="Slate">Slate</option>
+                <option value="Metal tile">Metal tile</option>
+                <option value="Ground mount">Ground mount</option>
+                <option value="Concrete">Concrete</option>
+                <option value="Asbestos">Asbestos</option>
+              </select>
+            </label>
+            <label for="" class="w33">
+              <span>Number Of Phases:</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">Choose Number Of Phases</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+              </select>
+            </label>
+            <label for="" class="w33 ml0 mr0">
+              <span>How Did You Hear About Us?</span>
+              <select name="" id="">
+                <option value="" disabled="" selected="">How Did You Hear About Us?</option>
+                <option value="Google">Google</option>
+                <option value="Radio">Radio</option>
+                <option value="Referral">Referral</option>
+              </select>
+            </label>
+            <label id="message-ps">
+              <span></span>
+              <input type="text">
+            </label>
+            <label for="">
+              <span>Notes:</span>
+              <textarea name="" id="" cols="30" rows="10"></textarea>
+            </label>
+            <button type="submit" class="submit">Submit</button>
+          </form>
+          <div class="message-close iconfont icon-close"></div>
+        </div>
+        <div class="mask"></div>
+      
+      </section>
+    </div>
+    <!-- 引入弹窗页面 -->
+      <script src="/public/js/vue.min.js"></script>
+      <script>
+        window.select01Tmp = [
+        "LONGi (LR4-60HPH-370M)【0】",
+        "JinKO (JKM370M-66H)【150】",
+        "REC (REC370TP4)【600】",
+        "Hyundai (HiE-S390UF)【850】",
+        "Q CELLS (Q.PEAK DUO ML-G9+390)【1000】",
+        "REC ALPHA PURE (REC400AA Pure)【2540】",
+        "LG (LG370N1C-E6)【2798】"
+        ];
+        window.select02Tmp = [
+        "SOLAX (X1-5.0-T-N/D)【0】",
+        "Growatt (5000TL-X)【0】",
+        "SUNGROW (SG5K-D PREMIUM)【300】",
+        "Huawei (2000-5KTL-L1) & WIFI DONGLE【450】",
+        "FIMER (UNO-DM-TL-PLUS-SB-QU)【500】",
+        "SMA (Sunny Boy 5.0)【700】",
+        "Fronius (Primo 5.0-1-M)【1000】",
+        ];
+        window.select01Sort = "ext_p11";
+        window.select02Sort = "ext_p12";
+        window.sortId = 2;
+        window.cateId = 17;
+        window.accessories = 18;
+        window.webSite = "http://www.everysolar.com.au/";
+      </script>
+<script src="/src/js/styles~about~commercial~contact~faq~index~inverter~monitoring~npo~panels~payment~process~product_vie~ee909047.js"></script><script src="/src/js/vendors~about~commercial~contact~faq~index~inverter~monitoring~npo~panels~payment~process~product_vi~9fbde959.js"></script><script src="/src/js/product_view.js"></script></body>
+
+</html>
