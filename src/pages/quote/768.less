@@ -1,0 +1,50 @@
+.center {
+  width: 80%;
+}
+
+body {
+  padding-top: 50px;
+}
+h1.title {
+  font-size: 28px;
+  padding: 50px 0;
+}
+.message-container {
+  width: 80%;
+  .contact-info {
+    border-radius: 20px;
+    .title {
+      font-size: 32px;
+      margin-bottom: 30px;
+      padding-bottom: 30px;
+      border-bottom: 1px solid #eee;
+    }
+    .form-box {
+      padding: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-wrap: wrap;
+      label {
+        display: flex;
+        flex-wrap: wrap;
+        line-height: 36px;
+        margin-bottom: 20px;
+        width: 100%;
+        &.w50 {
+          width: calc((100% - 10px) / 2);
+          margin: 0px 5px 10px;
+        }
+        &.w33 {
+          width: 100%;
+          margin: 0 0 10px;
+        }
+        &.ml0 {
+          margin-left: 0;
+        }
+        &.mr0 {
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+    <h1 class="title">Get a quote</h1>
+    <section class="message-container center">
+      <div class="contact-info">
+        <form action="" id="message" class="form-box">
+          <label for="" class="w50 ml0">
+            <span>First Name:</span>
+            <input type="text">
+          </label>
+          <label for="" class="w50 mr0">
+            <span>Family Name:</span>
+            <input type="text">
+          </label>
+          <label for="" class="ml0 mr0">
+            <span>Address:</span>
+            <input type="text">
+          </label>
+          <label for="" class="w50 ml0">
+            <span>Email:</span>
+            <input type="text">
+          </label>
+          <label for="" class="w50 mr0">
+            <span>Phone:</span>
+            <input type="text">
+          </label>
+          <label for="" class="w33 ml0 mr0">
+            <span>Roof Type:</span>
+            <select name="" id="">
+              <option value="" disabled="" selected="">Choose Roof Type</option>
+              <option value="Klip-Lok®">Klip-Lok®</option>
+              <option value="Tin / Colourbond">Tin / Colourbond</option>
+              <option value="LONGLINE®"> LONGLINE®</option>
+              <option value="Terracotta"> Terracotta</option>
+              <option value="Tile">Tile</option>
+              <option value="Slate">Slate</option>
+              <option value="Metal tile">Metal tile</option>
+              <option value="Ground mount">Ground mount</option>
+              <option value="Concrete">Concrete</option>
+              <option value="Asbestos">Asbestos</option>
+            </select>
+          </label>
+          <label for="" class="w33">
+            <span>Number Of Phases:</span>
+            <select name="" id="">
+              <option value="" disabled="" selected="">Choose Number Of Phases</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+          </label>
+          <label for="" class="w33 ml0 mr0">
+            <span>How Did You Hear About Us?</span>
+            <select name="" id="">
+              <option value="" disabled="" selected="">How Did You Hear About Us?</option>
+              <option value="Google">Google</option>
+              <option value="Referral">Referral</option>
+              <option value="Facebook">Facebook</option>
+              <option value="Instagram">Instagram</option>
+              <option value="Newspaper">Newspaper</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+          <label for="">
+            <span>Notes:</span>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </label>
+          <button type="submit" class="submit">Submit</button>
+        </form>
+        <div class="message-close iconfont icon-close"></div>
+      </div>
+      <div class="mask"></div>
+    </section>
+    <!-- 引入公共页尾 -->
+    <%= require("html-loader!../common/footer/index.html") %>
+</body>
+
+</html>

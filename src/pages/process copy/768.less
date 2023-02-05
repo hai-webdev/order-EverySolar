@@ -1,0 +1,51 @@
+.center {
+    width: 96%;
+  }
+  body{
+    padding-top: 50px;
+  }
+  h1.title{
+    font-size: 28px;
+    padding: 50px 0;
+  }
+  .process-container{
+    &.m{
+      display: block;
+    }
+    &.pc{
+      display: none;
+    }
+    .process-list{
+      .process-item{
+        margin: 0 3px 6px;
+        width: calc(100% / 2 - 6px);
+        padding: 10px 60px 10px 10px;
+        .num{
+          font-size: 120px;
+          right: -10px;
+        }
+        i.iconfont{
+          font-size: 28px;
+        }
+        .title{
+          font-size: 18px;
+          padding: 5px 0;
+          font-weight: bold;
+        }
+        .desc{
+          font-size: 12px;
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+  .video-container{
+    padding-top: 40px;
+    .video-box-list{
+      flex-wrap: wrap;
+      .video-box-item{
+        width: 100%;
+        padding: 0 10px 20px;
+      }
+    }
+  }

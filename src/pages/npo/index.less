@@ -1,0 +1,73 @@
+@import "~@/assets/global.less";
+img {
+  display: block;
+}
+.center {
+  width: 90%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.choose-us-container {
+  padding: 150px 0 0;
+  .title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 30px;
+ // font-family: "arimo-r";
+  }
+  .desc {
+    font-size: 2.2rem;
+    color:#666;
+    width: 33%;
+    margin: 0 auto 20px;
+    text-align: justify;
+    p {
+      margin-bottom: 10px;
+    }
+  }
+}
+.pics {
+  img {
+    width: 100%;
+  }
+}
+.case-container {
+  padding: 50px 0 0;
+  .title {
+    font-size: 4rem;
+    text-align: center;
+    margin-bottom: 50px;
+ // font-family: "arimo-r";
+  }
+  .case-list {
+    .case-item {
+      display: flex;
+      justify-content: space-between;
+      .img {
+        width: 50%;
+        padding: 0 10px;
+        box-sizing: border-box;
+        .bgImg(cover);
+      }
+      .text {
+        width: 50%;
+        padding: 20px 30px 50px;
+        box-sizing: border-box;
+        text-align: justify;
+        .title {
+          font-size: 3rem;
+          text-align: left;
+          margin-bottom: 20px;
+        }
+        p {
+          font-size: 2rem;
+          margin-bottom: 15px;
+          line-height: 1.8;
+        }
+      }
+    }
+  }
+}
+
+@import "./768.less" screen and (max-width: 768px);

@@ -1,0 +1,55 @@
+// body{
+//   padding-top: 52px;
+// }
+.banner-container {
+  height: 200px;
+  .title {
+    top: 45%;
+    font-size: 2.6rem;
+    width: 140px;
+  }
+  img{
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: translate(0,0);
+  }
+}
+.faq-container {
+  ul.faq-list {
+    li.faq-item {
+      .title {
+        display: flex;
+        background-color: #eee;
+        span {
+          font-size: 2.2rem;
+        }
+        i.iconfont {
+          position: relative;
+          width: 14px;
+          height: 14px;
+          &::before {
+            width: 14px;
+            height: 2px;
+          }
+          &::after {
+            width: 2px;
+            height: 14px;
+          }
+        }
+      }
+
+      .faq-sublist {
+        padding: 10px;
+        .faq-subitem {
+          .sub-title {
+            font-size: 1.8rem;
+          }
+          .content {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 引入公共页头 -->
+  <%= require("html-loader!../common/header/index.html") %>
+    <section class="contact-container center">
+      <div class="contact-info">
+        <div class="title wow fadeInDown">Contact Us</div>
+        <ul class="contact-list">
+          <li class="contact-item wow fadeInUp">
+            <span><i class="iconfont icon-addresss"></i>Address:</span>
+            <span>1/ 6 Overlord Pl, Acacia Ridge 4110</span>
+          </li>
+          <li class="contact-item wow fadeInUp" data-wow-delay="100ms">
+            <span><i class="iconfont icon-tel"></i>Phone:</span>
+            <span>
+              <a href="tel:1300 716 916">1300 716 916</a><a href="tel:0431 174 024">0431 174 024</a>&nbsp;(After-hour sales)
+            </span>
+          </li>
+          <li class="contact-item wow fadeInUp" data-wow-delay="200ms">
+            <span><i class="iconfont icon-email"></i>Email:</span>
+            <a href="mailto:sales@everysolar.com.au">sales@everysolar.com.au</a>
+          </li>
+        </ul>
+        <ul class="share-list">
+          <li class="share-item wow fadeInLeft" data-wow-delay="400ms">
+            <a href="" class="iconfont icon-facebook-fill">
+            </a>
+          </li>
+          <li class="share-item wow fadeInLeft" data-wow-delay="300ms">
+            <a href="" class="iconfont icon-linkedin-fill">
+            </a>
+          </li>
+          <li class="share-item wow fadeInLeft" data-wow-delay="200ms">
+            <a href="" class="iconfont icon-instagram">
+            </a>
+          </li>
+          <li class="share-item wow fadeInLeft" data-wow-delay="100ms">
+            <a href="" class="iconfont icon-youtube">
+            </a>
+          </li>
+
+        </ul>
+      </div>
+      <div class="map-box wow fadeInRight">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15858.658865352527!2d153.02991077630205!3d-27.58738617949296!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b9145582d1df379%3A0xde8d2988d14d32d0!2sEverySolar%202.0%20Pty%20Ltd!5e0!3m2!1sen!2sau!4v1639633943506!5m2!1sen!2sau"
+          id="map" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </section>
+    <!-- 引入公共页尾 -->
+    <%= require("html-loader!../common/footer/index.html") %>
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfJ4AQ5mF5oQkcmE_sb3k_wXRyFmNBZks&sensor=false">
+      </script>
+
+</body>
+
+</html>
